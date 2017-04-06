@@ -5,7 +5,7 @@
 .page-navbar-inner {
   margin: 15px auto 0px;
   min-height: 40px;
-  max-width: 980px;
+  max-width: 890px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -26,8 +26,8 @@
   color: $white;
 }
 .navbar__item {
-  height: 30px;
-  margin: 5px 11px;
+  height: 40px;
+  margin: 12px 35px 0px 0px;
   padding: 0px 4px 0px;
   line-height: 30px;
   font-size: 14px; 
@@ -36,30 +36,26 @@
   }
   &:hover {
     border-bottom: 2px solid $white;
-    height: 28px;
+    height: 38px;
   }
   &:hover:first-child,  &:hover:last-child {
     border-bottom: 0px;
-    height: 30px;
+    height: 40px;
   }
 }
 .navbar-button {
   line-height: 40px;
-  padding: 12px 30px;
+  padding: 0px 30px;
   img {
     padding: 9px 12px 0px 0px;
   }
 }
 .page-navbar-input__item {
   display: inline-block;
+  margin-top: 11px;
   @extend .navbar-button;
   @extend .navbar__item-a;
   &:hover {
     background-color: $green-lighter;
   }
 }
-
-
-
-
-

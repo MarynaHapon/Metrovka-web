@@ -4,26 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>site</title>
-  <link rel="shortcut icon" href="" type="image/png">
-  
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <div class="page-navbar-wrap">
     <div class="page-navbar-inner">
+      
+      
       <nav class="navbar">
+        
         <ul class="navbar__list">
-          <li class="navbar__item"><a class="page-logo" href="#"><img src="img/logo.svg" alt="logo"></a></li>
+          <li class="navbar__item"><a class="navbar-logo-link" href=""><img src="img/logo.svg" alt="logo"></a></li>
           <li class="navbar__item"><a href="#">Аренда</a></li>
           <li class="navbar__item"><a href="#">Продажа</a></li>
           <li class="navbar__item"><a href="#">Посуточно</a></li>
           <li class="navbar__item"><a href="#"><img class="navbar-overflow_img" src="img/overflow-menu.svg" alt="overflow menu">Еще</a>
             <!--
             <ul class="navbar-overflow__list">
-              <li class="navbar-owerflof__item">1</li>
-              <li class="navbar-owerflof__item">2</li>
-              <li class="navbar-owerclass="page-logo" flof__item">3</li>
+              <li class="navbar-owerflof__item">Блог</li>
+              <li class="navbar-owerflof__item">Контакты</li>
+              <li class="navbar-owerclass="page-logo" flof__item">Новый поиск</li>
             </ul>
             -->
           </li>
@@ -36,8 +37,39 @@
       </div>
     </div>
   </div>
+  <div class="property-search-wrap">
+    <section class="property-search">
+      <h1 class="property-search_header">Поиск недвижимости в Украине</h1>
+  
+      <form>
+        <div class="select-menu">
+          <h3 class="select-menu__header">Выберите город</h3>
+          <select class="select-menu__list">
+            <option class="select-menu__item" value="Киев" selected>Киев</option>
+            <option class="select-menu__item" value="Одесса">Одесса</option>
+            <option class="select-menu__item" value="Львов" selected>Львов</option>
+            <option class="select-menu__item" value="Чернигов">Чернигов</option>
+          </select>
+        </div>
+  
+        <div >
+          <h3>Кол-во комнат</h3>
+          <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class="disabled"><a href="#">4</a></li>
+            <li><a href="#">5+</a></li>
+          </ul>
+        </div>
   
   
   
+        <div>
+          <input type="submit" value="Перейти к поиску">
+        </div>
+      </form>
+    </section>
+  </div>
 </body>
 </html>

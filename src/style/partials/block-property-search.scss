@@ -1,7 +1,14 @@
 .property-search-wrap {
   width: 100%;
   background-color: $green;
+  color: $white;
 }
-.property-search-inner {
+.property-search {
+  margin: 0 auto;
   max-width: 890px;
+}
+
+
+.property-search {
+  //@extend .property-search-typography;
 }
