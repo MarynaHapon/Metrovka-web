@@ -39,6 +39,11 @@ $RECYCLE.BIN/
 .Trashes
 .VolumeIcon.icns
 
+# Project Directories 
+/node_modules
+/bower_components
+/_design
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
