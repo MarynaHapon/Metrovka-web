@@ -19,7 +19,8 @@
           <li class="navbar__item"><a href="#">Аренда</a></li>
           <li class="navbar__item"><a href="#">Продажа</a></li>
           <li class="navbar__item"><a href="#">Посуточно</a></li>
-          <li class="navbar__item"><a href="#"><img class="navbar-overflow_img" src="img/overflow-menu.svg" alt="overflow menu">Еще</a>
+          <li class="navbar__item"><a class="navbar-overflow_img" href="#">Еще</a>
+            
             <!--
             <ul class="navbar-overflow__list">
               <li class="navbar-owerflof__item">Блог</li>
@@ -32,16 +33,16 @@
       </nav>
   
       <div class="page-navbar-input">
-        <a class="page-navbar-input__item" href="#"><img src="img/nav-shape.svg">Разместить объявление</a>
+        <a class="page-navbar-input__item--img" href="#">Разместить объявление</a>
         <a class="page-navbar-input__item" href="#" type="submit">Войти</a>
       </div>
     </div>
   </div>
   <div class="property-search-wrap">
     <section class="property-search">
-      <h1 class="property-search_header">Поиск недвижимости в Украине</h1>
+      <h1 class="property-search__header">Поиск недвижимости в Украине</h1>
   
-      <form>
+      <form class="property-search-form">
         <div class="select-menu">
           <h3 class="select-menu__header">Выберите город</h3>
           <select class="select-menu__list">
@@ -53,22 +54,47 @@
         </div>
   
         <div >
-          <h3>Кол-во комнат</h3>
-          <ul class="pagination">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li class="disabled"><a href="#">4</a></li>
-            <li><a href="#">5+</a></li>
+          <h3 class="select-menu__header">Кол-во комнат</h3>
+          <ul class="select-menu__rating-list">
+            <li class="select-menu__item"><a href="#">1</a></li>
+            <li class="select-menu__item"><a href="#">2</a></li>
+            <li class="select-menu__item"><a href="#">3</a></li>
+            <li class="select-menu__item"><a href="#">4</a></li>
+            <li class="select-menu__item"><a href="#">5 +</a></li>
           </ul>
         </div>
-  
-  
-  
+        
         <div>
-          <input type="submit" value="Перейти к поиску">
+          <input class="property-search__submit" type="submit" value="Перейти к поиску">
         </div>
       </form>
+    </section>
+  </div>
+  
+  <div class="metro-search-wrap">
+    <section class="metro-search">
+      <div class="metro-search-inner">
+        <h2>Недвижимость возле метро</h2>
+        
+        <ul class="metro-search__list">
+          <li class="metro-search__item"><a href="#">Квартиры</a></li>
+          <li class="metro-search__item"><a href="#">Дома</a></li>
+          <li class="metro-search__item"><a href="#">Офисы</a></li>
+        </ul>
+        
+        
+        
+        <div class="dropdown">
+    <button class="dropbtn">Политехнический институт</button>
+    <div class="dropdown-content">
+      <a href="#">Политехнический институт</a>
+      <a href="#">Политехнический институт</a>
+      <a href="#">Политехнический институт</a>
+    </div>
+  </div>
+    </div>
+        
+      </div>
     </section>
   </div>
 </body>

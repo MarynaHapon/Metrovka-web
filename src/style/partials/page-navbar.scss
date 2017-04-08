@@ -3,7 +3,8 @@
   background-color: $green;
 }
 .page-navbar-inner {
-  margin: 15px auto 0px;
+  margin: 16px auto 0px;
+  padding: 8px 0px 10px;
   min-height: 40px;
   max-width: 890px;
   display: flex;
@@ -28,34 +29,50 @@
 .navbar__item {
   height: 40px;
   margin: 12px 35px 0px 0px;
-  padding: 0px 4px 0px;
+  padding: 0px 6px 0px;
   line-height: 30px;
   font-size: 14px; 
   a {
-    @extend .navbar__item-a;
+    text-decoration: none;
+    color: $white;
   }
   &:hover {
     border-bottom: 2px solid $white;
     height: 38px;
   }
-  &:hover:first-child,  &:hover:last-child {
+}
+.navbar__item:hover:first-child, 
+.navbar__item:hover:last-child {
     border-bottom: 0px;
     height: 40px;
   }
-}
 .navbar-button {
-  line-height: 40px;
   padding: 0px 30px;
+  line-height: 40px;
   img {
     padding: 9px 12px 0px 0px;
   }
 }
 .page-navbar-input__item {
-  display: inline-block;
-  margin-top: 11px;
   @extend .navbar-button;
   @extend .navbar__item-a;
+  display: inline-block;
+  margin-top: 11px;
   &:hover {
     background-color: $green-lighter;
   }
+}
+.page-navbar-input__item--img {
+  @extend .page-navbar-input__item;
+  margin-left: 30px; 
+  padding: 0 40px;
+  background-image: url('../img/nav-shape.svg');
+  background-repeat: no-repeat;
+  background-position: 15px 11px;
+}
+.navbar-overflow_img {
+  padding-left: 30px;
+  background-image: url('../img/overflow-menu.svg');
+  background-repeat: no-repeat;
+  background-position: left;
 }
