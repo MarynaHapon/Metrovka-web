@@ -37,6 +37,7 @@
   border-radius: 100%;
   border: 2px solid $white;
   a {
+  
     border-radius: 100%;
     display: inline-block;
     width: 36px;
@@ -44,12 +45,14 @@
     text-align: center;
     text-decoration: none;
     color: $white;
+    border-radius: 2px solid $white;
   }
   a:hover {
     color: $dark-blue;
   }
   &:hover {
     background-color: $white;
+    color: $dark-blue;
   }
 }
 .submit {
@@ -70,7 +73,6 @@
 
 .metro-search-wrap {
   width: 100%;
-  background-color: yellow;
 }
 .metro-search {
   //padding: 41.5px 0px 0px 50px;
@@ -78,7 +80,8 @@
   height: 295px;
   max-width: 890px;
   color: $dark-blue;
-  background-color: $white;
+  //background-color: $white;
+  background: url(../../img/metro.png)  $white no-repeat 450px center;
 }
 .metro-search-inner {
   max-width: 320px;
@@ -106,10 +109,9 @@
   }
 }
 
-
-
-
-
+.dropdowm-search-wrap {
+  margin-top: 18px;
+}
 /* Style The Dropdown Button */
 .dropbtn {
   height: 40px;
@@ -121,46 +123,54 @@
   border-radius: 2px;
   cursor: pointer;
   text-align: left;
+  background: url(../../img/triangle.svg) no-repeat 290px center, url('../../img/circle.svg') no-repeat 15px center;
 }
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.dropdown__content {
   display: none;
   position: absolute;
-  background-color: $gray;
   z-index: 1;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
+.dropdown__content a {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 40px;
   padding-left: 30px;
-  color: $dark-blue;
   height: 40px;
   width: 290px;
+  font-family: 'Roboto', sans-serif;
+  color: $dark-blue;
   text-decoration: none;
   display: block;
+  border-bottom: 2px solid $white;
+  background: url('../../img/circle.svg') no-repeat 15px center;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown__content a:hover {
   background-color: $white;
 }
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown__content {
   display: block;
+  background-color: $gray;
+}
+.dropdown:hover .dropbtn {
+  
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    //.background-color: #3e8e41;
+.search-submit-wrap {
+  margin-top: 25px;
+}
+.search-submit {
+  width: 320px;
+  height: 40px;
+  background-color: $green;
+  border: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: $white;
+  &:hover {
+    background-color: $green-lighter;
+  }
 }
