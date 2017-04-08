@@ -23,7 +23,7 @@ $RECYCLE.BIN/
 
 # OSX
 # =========================
-
+\Metrovka\node_modules
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -38,6 +38,10 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+
+# Project Directories 
+/node_modules
+/_design
 
 # Directories potentially created on remote AFP share
 .AppleDB
