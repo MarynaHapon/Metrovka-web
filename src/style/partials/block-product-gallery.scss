@@ -44,11 +44,11 @@
 }
 .product__allocation--red {
   @extend .product__allocation;
-  background: url('../../img/circle.svg') no-repeat left center;
+  background: url('../img/circle.svg') no-repeat left center;
 }
 .product__allocation--blue {
   @extend .product__allocation;
-  background: url('../../img/circle-blue.svg') no-repeat left center;
+  background: url('../img/circle-blue.svg') no-repeat left center;
 }
 .gallery-submit-wrap {
   margin-top: 20px;
