@@ -1,0 +1,38 @@
+
+/* Rectangle 2 */
+$green: #30AE63;
+$green-lighter: #50DB88;
+$white: #FFFFFF;
+$dark-blue: #152935;
+$gray: #DFE3E6;
+$gray-lighter: #8C9BA5;
+$dark-gray: #5A6872;
+
+
+//** Background color for `<body>`.
+$body-bg: #FFFFFF;
+//** Global text color on `<body>`.
+//$text-color:  $gray-dark;
+
+$navbar-margin-bottom: 0px;
+
+$text-size: 14px;
+$text-color-dark: $dark-blue;
+$text-color-white: $white;
+
+.btn {
+  width: 320px;
+  height: 40px;
+  background-color: $green;
+  border: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: $white;
+  &:hover {
+    background-color: $green-lighter;
+  }
+}
+
+.btn--small {
+  width: 160px;
+}

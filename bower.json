@@ -1,0 +1,21 @@
+{
+  "name": "proj",
+  "description": "second",
+  "main": "index.js",
+  "authors": [
+    "RSaiko"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MarynaHapon/Metrovka-web",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "^6.0.0"
+  }
+}
