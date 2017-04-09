@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "maryna"
+  ],
+  "license": "MIT",
+  "homepage": "",
+ "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}
