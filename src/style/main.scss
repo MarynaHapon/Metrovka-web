@@ -1,10 +1,15 @@
 /*
 * Third Party
 */
-//@import '../../bower_components/normalize.css/normalize.css';
-@import '../../bower_components/normalize.css/reset.css';
+//@import '../../bower_components/normalize-css/normalize.css';
+@import '../../bower_components/normalize-css/reset.css';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
 
 /*
 * Custom
@@ -13,14 +18,12 @@
 @import 'partials/page-navbar.scss';
 @import 'partials/block-property-search.scss';
 @import 'partials/block-product-gallery.scss';
-//@import "";
-//@import "";
+@import 'partials/social-section.scss';
+@import 'partials/blog-section.scss';
+@import 'partials/footer.scss';
 
-//@import "partials/blog-section.scss";
-//@import "partials/contact-section.scss";
-//@import "partials/page-footer.scss";
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto-Regular;
   font-size: 14px;
   color: $text-color-dark;
   background-color: $dark-gray;
@@ -30,4 +33,8 @@ h1 {
 }
 h2 {
   font-size: 24px;
+}
+a {
+  color: #152935;
+  text-decoration: none;
 }

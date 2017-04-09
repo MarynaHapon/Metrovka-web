@@ -1,0 +1,100 @@
+.social-block {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 0;
+  width: 890px;
+  text-align: center;
+
+  &__header {
+    font-size: 24px;
+  }
+
+  &__subheader {
+    margin-top: 30px;
+    line-height: 22px;
+  }
+}
+
+.tab-wrapper {
+  margin-top: 20px;
+
+  &__item {
+    display: inline-block;
+    margin: 0px 25px;
+    cursor: pointer;
+
+    &:hover {
+      padding-bottom: 10px;
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  &__item--active {
+    padding-bottom: 10px;
+    border-bottom: 2px solid $green;
+  }
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.contact-description {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: left;
+
+  &__logo {
+    display: flex;
+    margin-top: 110px;
+    font-size: 32px;
+    align-items: center;
+
+    &::before {
+      content:url('../img/telegram.png');
+      width: 62px;
+      height: 62px;
+      padding-right: 25px;
+    }
+  }
+
+  &__header {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  &__list {
+    margin-top: 30px;
+
+    li {
+      padding: 0 0 12px;
+      line-height: 1.3;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+}
+
+.tab-circle {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  &__item {
+    margin: 0 5px;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    border: 2px solid $green;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  &__item--active {
+    background-color: $green;
+  }
+}
