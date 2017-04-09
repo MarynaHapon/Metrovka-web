@@ -1,13 +1,13 @@
 {
-  "name": "website",
+  "name": "Metrovka",
   "description": "",
   "main": "index.js",
   "authors": [
     "maryna"
   ],
   "license": "MIT",
-  "homepage": "",
- "ignore": [
+  "homepage": "https://github.com/MarynaHapon/Metrovka-web",
+  "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
