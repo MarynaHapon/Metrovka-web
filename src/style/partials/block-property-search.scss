@@ -37,7 +37,6 @@
   border-radius: 100%;
   border: 2px solid $white;
   a {
-  
     border-radius: 100%;
     display: inline-block;
     width: 36px;
@@ -113,7 +112,7 @@
   margin-top: 18px;
 }
 /* Style The Dropdown Button */
-.dropbtn {
+.dropdown-search-btn {
   height: 40px;
   width: 320px;
   padding-left: 30px;
@@ -125,38 +124,34 @@
   text-align: left;
   background: url('../img/triangle.svg') no-repeat 290px center, url('../img/circle.svg') no-repeat 15px center;
 }
-.dropdown {
+.dropdown-search {
   position: relative;
   display: inline-block;
 }
-.dropdown__content {
-  display: none;
-  position: absolute;
-  z-index: 1;
+.dropdown-search__content {
+  @extend .dropdown__content;
 }
-.dropdown__content a {
+.dropdown-search__item {
+  @extend .dropdown__item;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 40px;
   padding-left: 30px;
   height: 40px;
   width: 290px;
-  font-family: 'Roboto', sans-serif;
   color: $dark-blue;
-  text-decoration: none;
-  display: block;
   border-bottom: 2px solid $white;
   background: url('../img/circle.svg') no-repeat 15px center;
 }
-.dropdown__content a:hover {
+.dropdown-search__content a:hover {
   background-color: $white;
 }
-.dropdown:hover .dropdown__content {
-  display: block;
+.dropdown-search:hover .dropdown-search__content {
+  @extend .dropdown;
   background-color: $gray;
 }
-.dropdown:hover .dropbtn {
-  
+.dropdown__content a:hover  {
+ 
 }
 
 .search-submit-wrap {
