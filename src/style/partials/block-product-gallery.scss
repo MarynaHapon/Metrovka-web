@@ -17,11 +17,19 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  @media (max-width: 890px) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 }
 .product {
   position: relative;
+  //padding-bottom: 5px;
   width: 202px;
   color: $dark-blue;
+  @media (max-width: 890px) {
+    padding: 0 5px 5px;
+  }
 }
 .dropdown-gallery-btn {
   @extend .dropdown-btn;
@@ -30,7 +38,7 @@
   right: 12px;
   height: 30px;
   width: 15px;
-  background: url('../../img/3circle.svg') no-repeat left top;
+  background: url('../img/3circle.svg') no-repeat left top;
 }
 .dropdown-gallery__content {
   @extend .dropdown__content;

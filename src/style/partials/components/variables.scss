@@ -9,6 +9,8 @@ $gray-lighter:  #8C9BA5;
 $dark-gray:     #5A6872;
 $red:           #E71D32;
 
+$button-height: 27px;
+$button-width: 35px;
 //** Background color for `<body>`.
 $body-bg:       #FFFFFF;
 //** Global text color on `<body>`.
@@ -19,6 +21,13 @@ $navbar-margin-bottom: 0px;
 $text-size: 14px;
 $text-color-dark: $dark-blue;
 $text-color-white: $white;
+
+$select-width: 340px;
+$select-height: 36px; 
+
+
+
+
 
 .btn {
   width: 320px;
