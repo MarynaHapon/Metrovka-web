@@ -8,6 +8,7 @@ $gray:          #DFE3E6;
 $gray-lighter:  #8C9BA5;
 $dark-gray:     #5A6872;
 $red:           #E71D32;
+$blue:          #2573D8;
 $blue-lighter : #F5F7FA;
 $button-height: 27px;
 $button-width: 35px;
@@ -25,7 +26,12 @@ $text-color-white: $white;
 $select-width: 320px;
 $select-height: 36px; 
 
-
+//breakpoints
+$screen-xxs: 375px;
+$screen-sm:  480px;
+$screen-md:  768px;
+$screen-lg:  890px;
+$screen-xl:  1280px;
 
 
 
@@ -41,7 +47,6 @@ $select-height: 36px;
     background-color: $green-lighter;
   }
 }
-
 .btn--small {
   width: 160px;
 }

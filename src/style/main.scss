@@ -4,7 +4,7 @@
 //@import '../../bower_components/normalize-css/normalize.css';
 @import '../../bower_components/normalize.css/reset.css';
 
-//@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @font-face {
   font-family: Roboto-Regular;
@@ -23,12 +23,13 @@
 @import 'partials/social-section.scss';
 @import 'partials/blog-section.scss';
 @import 'partials/footer.scss';
+@import 'partials/listing.scss';
 
 body {
   font-family: Roboto-Regular;
   font-size: 14px;
   color: $text-color-dark;
-  background-color: $dark-gray;
+  background-color: $gray;
 }
 h1 {
   font-size: 32px;
