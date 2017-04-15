@@ -7,7 +7,7 @@ $dark-blue: #152935;
 $gray: #DFE3E6;
 $gray-lighter: #8C9BA5;
 $dark-gray: #5A6872;
-
+$blue: #2573D8;
 
 //** Background color for `<body>`.
 $body-bg: #FFFFFF;
@@ -20,19 +20,16 @@ $text-size: 14px;
 $text-color-dark: $dark-blue;
 $text-color-white: $white;
 
-.btn {
-  width: 320px;
-  height: 40px;
-  background-color: $green;
-  border: 0px;
-  border-radius: 2px;
-  cursor: pointer;
-  color: $white;
-  &:hover {
-    background-color: $green-lighter;
-  }
-}
+//breakpoints
+$screen-xxs: 375px;
+$screen-sm:  480px;
+$screen-md:  768px;
+$screen-lg:  890px;
+$screen-xl:  1280px;
 
-.btn--small {
-  width: 160px;
+.btn {
+  max-width: 100%;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
 }
