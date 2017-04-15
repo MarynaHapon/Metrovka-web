@@ -13,9 +13,20 @@ $('#toggle').click(function() {
    $('#overlay').toggleClass('open');
   });
 
+$('.toggle-advert').click(function() {
+   $(this).toggleClass('active-advert');
+   $('#overlay-advert').toggleClass('open-advert');
+  });
 
-
-
+/** search **/
+function openSearch(searchElement) {
+    var i;
+    var x = document.getElementsByClassName("searchElement");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    document.getElementById(searchElement).style.display = "block"; 
+}
 /*
 select
 */

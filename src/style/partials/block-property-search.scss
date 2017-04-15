@@ -2,16 +2,12 @@
   width: 100%;
   background-color: $green;
   color: $white;
-  //padding: 0px 10px;
-  
-  
 }
 .property-search {
   margin: 0px auto;
   max-width: 890px;
   padding-bottom: 30px;
   @media (max-width: 890px) {
-    //width: 96%;
     padding: 0px 0px 30px 16px;
   }
 }
@@ -27,7 +23,6 @@
   padding: 0px 0px 10px 0px;
 }
 .property-search-form {
-  //margin-left: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,7 +40,6 @@
     }
   }
 }
-
 .select-menu__list {
   height: 40px;
   width: 344px;
@@ -63,7 +57,7 @@
   height: 36px;
   width: 36px;
   border-radius: 100%;
-  border: 2px solid $white;
+  border: 1px solid $white;
   a {
     border-radius: 100%;
     display: inline-block;
@@ -72,7 +66,7 @@
     text-align: center;
     text-decoration: none;
     color: $white;
-    border-radius: 2px solid $white;
+    border-radius: 2px;
   }
   a:hover {
     color: $dark-blue;
@@ -82,7 +76,20 @@
     color: $dark-blue;
   }
 }
-
+.select-menu__item--invert {
+  border: 1px solid $gray;
+  a {
+    color: $dark-blue;
+  }
+  a:hover {
+    color: $white;
+  }
+  &:hover {
+    background-color: $green;
+    color: $white;
+    border: 1px solid $green;
+  }
+}
 .submit {
   width: 200px;
   height: 40px;
@@ -98,16 +105,13 @@
 .property-search__submit {
   @extend .submit;
 }
-
 .metro-search-wrap {
   width: 100%;
 }
 .metro-search {
-  //padding: 41.5px 0px 0px 50px;
   margin: 19px auto 19px;
   max-width: 890px;
   color: $dark-blue;
-  //background-color: $white;
   background: url('../img/metro.png')  $white no-repeat 450px center;
   @media (max-width: 890px) {
     padding-top: 217px;
@@ -127,11 +131,11 @@
   line-height: 32px;
   font-size: 20px;
 }
-.metro-search__list {
+.search__list {
   @extend .navbar__list;
   justify-content: flex-start;
 }
-.metro-search__item {
+.search__item {
   height: 40px;
   margin: 18px 30px 0px 0px;
   padding: 0px 6px 0px;
@@ -146,7 +150,6 @@
     height: 38px;
   }
 }
-
 .dropdowm-search-wrap {
   margin-top: 19px;
 }
@@ -196,7 +199,6 @@
 .search-submit-wrap {
   padding-top: 30px;
   padding-bottom: 19px;
-  
 }
 .search-submit {
   width: 320px;
@@ -206,11 +208,10 @@
   border-radius: 2px;
   cursor: pointer;
   color: $white;
-  &:hover {
-    background-color: $green-lighter;
-  }
 }
-
+.search-submit:hover {
+  background-color: $green-lighter;
+}
 
 
 

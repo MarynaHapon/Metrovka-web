@@ -29,8 +29,79 @@
       </nav>
   
       <div class="page-navbar-input">
-        <a class="page-navbar-input__item--img" href="#">Разместить объявление</a>
+        <a class="toggle-advert page-navbar-input__item--img" id="toggle-advert" href="#">Разместить объявление</a>
         <a class="page-navbar-input__item" href="#" type="submit">Войти</a>
+      </div>
+    </div>
+    
+    <div id="overlay-advert" class="page-advert-wrap">
+      <div class="page-advert">
+        <div class="page-advert-inner">
+          <div class="page-advert__descr">
+            <h2>Оставить заявку</h2>
+            <p>Нет времени искать по сайту?</br>
+              Заполняй критерии поиска и получай </br>
+              акутальные объявления как только они</br>
+              появляются на Metrovka.</p>
+          </div>
+        </div>
+  
+        <div class="page-advert-inner page-advert-form-wrap" id="overlay-s">   
+          <input class="toggle-advert advert-exit-btn" type="button">
+          <ul class="search__list">
+            <li class="search__item"><a onclick="openSearch('District')" href="#">Район</a></li>
+            <li class="search__item"><a onclick="openSearch('Metro')" href="#">Метро</a></li>
+          </ul> 
+          
+          <div class="searchElement" id="District">
+            <select>
+              <option>Голосеевский</option>
+              <option>Дарницкий</option>
+              <option>Деснянский</option>
+              <option>Днепровский</option>
+              <option>Оболонский</option>
+              <option>Печерский</option>
+              <option>Подольский</option>
+              <option>Святошинский</option>
+              <option>Соломенский</option>
+              <option>Шевченковский</option>
+            </select>
+          </div>
+          <div class="searchElement" id="Metro" style="display: none;">
+            <select>
+              <option>Академгородок</option>
+              <option>Святошин</option>
+              <option>Нивки</option>
+              <option>Вокзальная</option>
+              <option>Крещатик</option>
+              <option>Левобережная</option>
+              <option>Минская</option>
+              <option>Олимпийская</option>
+              <option>Лукьяновская</option>
+              <option>Золотые ворота</option>
+              <option>Харьковская</option>
+            </select>
+          </div>
+            
+          <div class="property-search-form__item">
+            <h3 class="select-menu__header">Кол-во комнат</h3>
+              <ul class="select-menu__rating-list">
+                <li class="select-menu__item select-menu__item--invert"><a href="#">1</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">2</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">3</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">4</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">5 +</a></li>
+              </ul>
+          </div>
+          
+          <form class="advert-form">
+            <input class="advert-form__text" type="text" placeholder="Как вас зовут?">
+            </br>
+            <input class="advert-form__text" type="email" placeholder="Email">
+            </br>
+            <input class="advert-form__btn" type="submit" value="Оставить заявку">
+          </form>
+        </div>
       </div>
     </div>
     
@@ -97,10 +168,10 @@
       <div class="metro-search-inner">
         <h2 class="metro-search__header">Недвижимость возле метро</h2>
         
-        <ul class="metro-search__list">
-          <li class="metro-search__item"><a href="#">Квартиры</a></li>
-          <li class="metro-search__item"><a href="#">Дома</a></li>
-          <li class="metro-search__item"><a href="#">Офисы</a></li>
+        <ul class="search__list">
+          <li class="search__item"><a href="#">Квартиры</a></li>
+          <li class="search__item"><a href="#">Дома</a></li>
+          <li class="search__item"><a href="#">Офисы</a></li>
         </ul>
         
         
@@ -217,10 +288,10 @@
         <h2 class="block-product-gallery__header">Последние объявления в Киеве</h2>
         
         <div class="product-gallery__search">
-          <ul class="metro-search__list">
-            <li class="metro-search__item"><a href="#">Квартиры</a></li>
-            <li class="metro-search__item"><a href="#">Дома</a></li>
-            <li class="metro-search__item"><a href="#">Офисы</a></li>
+          <ul class="search__list">
+            <li class="search__item"><a href="#">Квартиры</a></li>
+            <li class="search__item"><a href="#">Дома</a></li>
+            <li class="search__item"><a href="#">Офисы</a></li>
           </ul>
         </div>
         
