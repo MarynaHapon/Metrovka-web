@@ -11,29 +11,120 @@
   <div class="page-navbar-wrap">
     <div class="page-navbar-inner">
       
-      
       <nav class="navbar">
-        
         <ul class="navbar__list">
-          <li class="navbar__item"><a class="navbar-logo-link" href=""><img src="build/img/logo.svg" alt="logo"></a></li>
-          <li class="navbar__item"><a href="#">Аренда</a></li>
+          <li class="navbar__item"><a class="navbar-logo-link" href="index.html"><img src="build/img/logo.svg" alt="logo"></a></li>
+          <li class="navbar__item"><a href="listing-main.html">Аренда</a></li>
           <li class="navbar__item"><a href="#">Продажа</a></li>
           <li class="navbar__item"><a href="#">Посуточно</a></li>
-          <li class="navbar__item"><a class="navbar-overflow_img" href="#">Еще</a>
-            <!--
+          <li class="navbar__item navbar-overflow-btn"><a class="navbar-overflow_img" href="#">Еще</a>
+            
             <ul class="navbar-overflow__list">
-              <li class="navbar-owerflof__item">Блог</li>
-              <li class="navbar-owerflof__item">Контакты</li>
-              <li class="navbar-owerclass="page-logo" flof__item">Новый поиск</li>
+              <li class="navbar-owerflof__item"><a href="#">Блог</a></li>
+              <li class="navbar-owerflof__item"><a href="#">Контакты</a></li>
+              <li class="navbar-owerflof__item"><a href="#">Новый поиск</a></li>
             </ul>
-            -->
           </li>
         </ul>
       </nav>
   
       <div class="page-navbar-input">
-        <a class="page-navbar-input__item--img" href="#">Разместить объявление</a>
+        <a class="toggle-advert page-navbar-input__item--img" id="toggle-advert" href="#">Разместить объявление</a>
         <a class="page-navbar-input__item" href="#" type="submit">Войти</a>
+      </div>
+    </div>
+    
+    <div id="overlay-advert" class="page-advert-wrap">
+      <div class="page-advert">
+        <div class="page-advert-inner">
+          <div class="page-advert__descr">
+            <h2>Оставить заявку</h2>
+            <p>Нет времени искать по сайту?</br>
+              Заполняй критерии поиска и получай </br>
+              акутальные объявления как только они</br>
+              появляются на Metrovka.</p>
+          </div>
+        </div>
+  
+        <div class="page-advert-inner page-advert-form-wrap" id="overlay-s">   
+          <input class="toggle-advert advert-exit-btn" type="button">
+          <ul class="search__list">
+            <li class="search__item"><a onclick="openSearch('District')" href="#">Район</a></li>
+            <li class="search__item"><a onclick="openSearch('Metro')" href="#">Метро</a></li>
+          </ul> 
+          
+          <div class="searchElement" id="District">
+            <select>
+              <option>Голосеевский</option>
+              <option>Дарницкий</option>
+              <option>Деснянский</option>
+              <option>Днепровский</option>
+              <option>Оболонский</option>
+              <option>Печерский</option>
+              <option>Подольский</option>
+              <option>Святошинский</option>
+              <option>Соломенский</option>
+              <option>Шевченковский</option>
+            </select>
+          </div>
+          <div class="searchElement" id="Metro" style="display:none">
+            <select>
+              <option>Академгородок</option>
+              <option>Святошин</option>
+              <option>Нивки</option>
+              <option>Вокзальная</option>
+              <option>Крещатик</option>
+              <option>Левобережная</option>
+              <option>Минская</option>
+              <option>Олимпийская</option>
+              <option>Лукьяновская</option>
+              <option>Золотые ворота</option>
+              <option>Харьковская</option>
+            </select>
+          </div>
+            
+          <div class="property-search-form__item">
+            <h3 class="select-menu__header">Кол-во комнат</h3>
+              <ul class="select-menu__rating-list">
+                <li class="select-menu__item select-menu__item--invert"><a href="#">1</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">2</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">3</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">4</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">5 +</a></li>
+              </ul>
+          </div>
+          
+          <form class="advert-form">
+            <input class="advert-form__text" type="text" placeholder="Как вас зовут?">
+            </br>
+            <input class="advert-form__text" type="email" placeholder="Email">
+            </br>
+            <input class="advert-form__btn" type="submit" value="Оставить заявку">
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="page-header-navigation">
+        <div class="page-header-navigation__button" id="toggle">
+          <span class="page-header-navigation__button--top"></span>
+          <span class="page-header-navigation__button--middle"></span>
+          <span class="page-header-navigation__button--bottom"></span>
+        </div>  
+            
+        <div class="page-header-navigation__overlay" id="overlay">
+          <nav class="page-header-navigation__overlay-menu">
+            <ul>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Продажа</a></li>
+              <li><a href="#">Посуточно</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Новый поиск</a></li>
+            </ul>
+          </nav>
+         </div>  
       </div>
     </div>
   </div>
@@ -41,18 +132,20 @@
     <section class="property-search">
       <h1 class="property-search__header">Поиск недвижимости в Украине</h1>
   
-      <form class="property-search-form">
-        <div class="select-menu">
-          <h3 class="select-menu__header">Выберите город</h3>
-          <select class="select-menu__list">
-            <option class="select-menu__item" value="Киев" selected>Киев</option>
-            <option class="select-menu__item" value="Одесса">Одесса</option>
-            <option class="select-menu__item" value="Львов" selected>Львов</option>
-            <option class="select-menu__item" value="Чернигов">Чернигов</option>
-          </select>
+      <div class="property-search-form">
+        <div class="property-search-form__item">
+          <div class="select-menu">
+            <h3 class="select-menu__header">Выберите город</h3>
+            <select class="select-menu__list">
+              <option class="select-menu__item" value="Киев" selected>Киев</option>
+              <option class="select-menu__item" value="Одесса">Одесса</option>
+              <option class="select-menu__item" value="Львов" selected>Львов</option>
+              <option class="select-menu__item" value="Чернигов">Чернигов</option>
+            </select>
+          </div>
         </div>
-  
-        <div >
+        
+        <div class="property-search-form__item">
           <h3 class="select-menu__header">Кол-во комнат</h3>
           <ul class="select-menu__rating-list">
             <li class="select-menu__item"><a href="#">1</a></li>
@@ -63,22 +156,22 @@
           </ul>
         </div>
         
-        <div>
+        <div class="property-search-form__item">
           <input class="property-search__submit" type="submit" value="Перейти к поиску">
         </div>
-      </form>
+      </div>
     </section>
   </div>
   
   <div class="metro-search-wrap">
     <section class="metro-search">
       <div class="metro-search-inner">
-        <h2>Недвижимость возле метро</h2>
+        <h2 class="metro-search__header">Недвижимость возле метро</h2>
         
-        <ul class="metro-search__list">
-          <li class="metro-search__item"><a href="#">Квартиры</a></li>
-          <li class="metro-search__item"><a href="#">Дома</a></li>
-          <li class="metro-search__item"><a href="#">Офисы</a></li>
+        <ul class="search__list">
+          <li class="search__item"><a href="#">Квартиры</a></li>
+          <li class="search__item"><a href="#">Дома</a></li>
+          <li class="search__item"><a href="#">Офисы</a></li>
         </ul>
         
         
@@ -89,7 +182,7 @@
                 <a class="dropdown-search__item" href="#">Политехнический институт</a>
                 <a class="dropdown-search__item" href="#">Вокзальнаят</a>
                 <a class="dropdown-search__item" href="#">Университет</a>
-                <a class="dropdown-search__item" href="#">Театральная</a>
+                <a class="dropdown-search__item"href="#">Театральная</a>
               </div>
           </div>
         </div>
@@ -195,10 +288,10 @@
         <h2 class="block-product-gallery__header">Последние объявления в Киеве</h2>
         
         <div class="product-gallery__search">
-          <ul class="metro-search__list">
-            <li class="metro-search__item"><a href="#">Квартиры</a></li>
-            <li class="metro-search__item"><a href="#">Дома</a></li>
-            <li class="metro-search__item"><a href="#">Офисы</a></li>
+          <ul class="search__list">
+            <li class="search__item"><a href="#">Квартиры</a></li>
+            <li class="search__item"><a href="#">Дома</a></li>
+            <li class="search__item"><a href="#">Офисы</a></li>
           </ul>
         </div>
         
@@ -283,73 +376,84 @@
     </section>
     
   </div>
-  <section class="social-block">
-      <h4 class="social-block__header">
-          Общайтесь в Telegram
-      </h4>
-      <p class="social-block__subheader">
-          Не отвлекайтесь больше на формальности. Получайте моментальные <br> уведомления о новых обьявлениях, общайтесь без ограничений.
-      </p>
-      <div class="tab-wrapper">
-          <div class="tab-wrapper__item tab-wrapper__item--active">Поиск недвижимости</div>
-          <div class="tab-wrapper__item">Общение с клиентами</div>
-      </div>
-      <div class="contact-wrapper">
-          <div class="contact-wrapper__image-promo">
-              <img src="build/img/phone.png" alt="">
+  <section class="social-block-wrapper">
+      <div class="social-block">
+          <h4 class="social-block__header">
+              Общайтесь в Telegram
+          </h4>
+          <p class="social-block__subheader">
+              Не отвлекайтесь больше на формальности. Получайте моментальные <br> уведомления о новых обьявлениях, общайтесь без ограничений.
+          </p>
+          <div class="tab-wrapper">
+              <div class="tab-wrapper__item tab-wrapper__item--active">Поиск недвижимости</div>
+              <div class="tab-wrapper__item">Общение с клиентами</div>
           </div>
-          <div class="contact-wrapper__description contact-description">
-              <div class="contact-description__logo">
-                  <span>
-                      Telegram
-                  </span>
+          <div class="contact-wrapper">
+              <div class="contact-wrapper__image-promo">
+                  <img src="build/img/phone.png" alt="">
               </div>
-              <p class="contact-description__header">Metrovka Bot</p>
-              <div class="contact-description__list">
-                  <ul>
-                      <li>1. Собирайте аналитику по объектам</li>
-                      <li>2. Получайте подсказки по эффективному <br> продвижению объявлений</li>
-                      <li>3. Общайтесь с клиентами через специальный <br> канал телекоммуникации</li>
-                  </ul>
+              <div class="contact-wrapper__description contact-description">
+                  <div class="contact-description__logo">
+                      <span>
+                          Telegram
+                      </span>
+                  </div>
+                  <p class="contact-description__header">Metrovka Bot</p>
+                  <div class="contact-description__list">
+                      <ul>
+                          <li>1. Собирайте аналитику по объектам</li>
+                          <li>2. Получайте подсказки по эффективному <br> продвижению объявлений</li>
+                          <li>3. Общайтесь с клиентами через специальный <br> канал телекоммуникации</li>
+                      </ul>
+                  </div>
+                  <button class="contact-description__btn">Присоединиться в Telegram</button>
               </div>
-              <button class="contact-description__btn btn">Присоединиться в Telegram</button>
           </div>
-      </div>
-      <div class="tab-circle">
-          <div class="tab-circle__item tab-circle__item--active"></div>
-          <div class="tab-circle__item"></div>
+          <div class="tab-circle">
+              <div class="tab-circle__item tab-circle__item--active"></div>
+              <div class="tab-circle__item"></div>
+          </div>
       </div>
   </section>
-  <section class="social-block blog">
-      <h4 class="social-block__header">
-          Блог Metrovka
-      </h4>
-      <p class="social-block__subheader">
-          Хитрости, приемы, советы, фото и видео – все о том как продать, <br>  купить, сдать в аренду или арендовать недвижимость.
-      </p>
-      <div class="blog-wrapper">
-          <div class="blog-item">
-              <img class="blog-item__img" src="build/img/blog1.png" alt="">
-              <p class="blog-item__theme blog-item__theme--purple">Лайфхак</p>
-              <h6 class="blog-item__title ">Киевляне могут оплатить коммуналку через Facebook…</h6>
-              <p class="blog-item__author">Татьяна Малыняк  •  5 мин чтения</p>
+  <section class="social-block-wrapper blog">
+      <div class="social-block">
+          <h4 class="social-block__header">
+              Блог Metrovka
+          </h4>
+          <p class="social-block__subheader">
+              Хитрости, приемы, советы, фото и видео – все о том как продать, <br>  купить, сдать в аренду или арендовать недвижимость.
+          </p>
+          <div class="blog-wrapper">
+              <div class="blog-item">
+                  <img class="blog-item__img" src="build/img/blog1.png" alt="">
+                  <div class="blog-item__content">
+                      <p class="blog-item__theme blog-item__theme--purple">Лайфхак</p>
+                      <h6 class="blog-item__title ">Киевляне могут оплатить коммуналку через Facebook…</h6>
+                      <p class="blog-item__author">Татьяна Малыняк  •  5 мин чтения</p>
+                  </div>
+              </div>
+              <div class="blog-item">
+                  <img class="blog-item__img" src="build/img/blog2.png" alt="">
+                  <div class="blog-item__content">
+                      <p class="blog-item__theme blog-item__theme--green">Совет Metrovka</p>
+                      <h6 class="blog-item__title ">ТОП-5 самых дешевых квартир Киева</h6>
+                      <p class="blog-item__author">Татьяна Малыняк  •  4 мин чтения</p>
+                  </div>
+              </div>
+              <div class="blog-item">
+                  <img class="blog-item__img" src="build/img/blog3.png" alt="">
+                  <div class="blog-item__content">
+                      <p class="blog-item__theme blog-item__theme--blue">Технологии</p>
+                      <h6 class="blog-item__title ">Смарт квартиры: цены, предложения и законность</h6>
+                      <p class="blog-item__author">Татьяна Малыняк  •  2 мин чтения</p>
+                  </div>
+              </div>
           </div>
-          <div class="blog-item">
-              <img class="blog-item__img" src="build/img/blog2.png" alt="">
-              <p class="blog-item__theme blog-item__theme--green">Совет Metrovka</p>
-              <h6 class="blog-item__title ">ТОП-5 самых дешевых квартир Киева</h6>
-              <p class="blog-item__author">Татьяна Малыняк  •  4 мин чтения</p>
-          </div>
-          <div class="blog-item">
-              <img class="blog-item__img" src="build/img/blog3.png" alt="">
-              <p class="blog-item__theme blog-item__theme--blue">Технологии</p>
-              <h6 class="blog-item__title ">Смарт квартиры: цены, предложения и законность</h6>
-              <p class="blog-item__author">Татьяна Малыняк  •  2 мин чтения</p>
+          <div class="gallery-submit-wrap blog-link">
+              <a class="gallery-submit" href="#">Перейти на страницу блога</a>
           </div>
       </div>
-      <div class="gallery-submit-wrap blog-link">
-          <a class="gallery-submit" href="#">Перейти на страницу блога</a>
-      </div>
+  
   </section>
   <footer>
       <section class="footer">
@@ -398,7 +502,7 @@
                   <li class="footer-item__list--sm-gutter footer-item__list--small">Киев, 01033</li>
                   <li><a href="mailto:info@metrovka.ua" >info@metrovka.ua</a></li>
               </ul>
-              <button class="footer-item__btn btn btn--small">Оставить заявку</button>
+              <button class="footer-item__btn">Оставить заявку</button>
           </div>
       </section>
   
@@ -407,7 +511,6 @@
   </footer>
 
   <script src="https://use.fontawesome.com/fe62aee9e3.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="build/js/main.js"></script>
 </body>
 </html>
