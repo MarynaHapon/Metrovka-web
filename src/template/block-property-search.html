@@ -2,18 +2,20 @@
   <section class="property-search">
     <h1 class="property-search__header">Поиск недвижимости в Украине</h1>
 
-    <form class="property-search-form">
-      <div class="select-menu">
-        <h3 class="select-menu__header">Выберите город</h3>
-        <select class="select-menu__list">
-          <option class="select-menu__item" value="Киев" selected>Киев</option>
-          <option class="select-menu__item" value="Одесса">Одесса</option>
-          <option class="select-menu__item" value="Львов" selected>Львов</option>
-          <option class="select-menu__item" value="Чернигов">Чернигов</option>
-        </select>
+    <div class="property-search-form">
+      <div class="property-search-form__item">
+        <div class="select-menu">
+          <h3 class="select-menu__header">Выберите город</h3>
+          <select class="select-menu__list">
+            <option class="select-menu__item" value="Киев" selected>Киев</option>
+            <option class="select-menu__item" value="Одесса">Одесса</option>
+            <option class="select-menu__item" value="Львов" selected>Львов</option>
+            <option class="select-menu__item" value="Чернигов">Чернигов</option>
+          </select>
+        </div>
       </div>
-
-      <div >
+      
+      <div class="property-search-form__item">
         <h3 class="select-menu__header">Кол-во комнат</h3>
         <ul class="select-menu__rating-list">
           <li class="select-menu__item"><a href="#">1</a></li>
@@ -24,33 +26,33 @@
         </ul>
       </div>
       
-      <div>
+      <div class="property-search-form__item">
         <input class="property-search__submit" type="submit" value="Перейти к поиску">
       </div>
-    </form>
+    </div>
   </section>
 </div>
 
 <div class="metro-search-wrap">
   <section class="metro-search">
     <div class="metro-search-inner">
-      <h2>Недвижимость возле метро</h2>
+      <h2 class="metro-search__header">Недвижимость возле метро</h2>
       
-      <ul class="metro-search__list">
-        <li class="metro-search__item"><a href="#">Квартиры</a></li>
-        <li class="metro-search__item"><a href="#">Дома</a></li>
-        <li class="metro-search__item"><a href="#">Офисы</a></li>
+      <ul class="search__list">
+        <li class="search__item"><a href="#">Квартиры</a></li>
+        <li class="search__item"><a href="#">Дома</a></li>
+        <li class="search__item"><a href="#">Офисы</a></li>
       </ul>
       
       
       <div class="dropdowm-search-wrap">
-        <div class="dropdown">
-          <button class="dropbtn">Политехнический институт</button>
-            <div class="dropdown__content">
-              <a href="#">Политехнический институт</a>
-              <a href="#">Вокзальнаят</a>
-              <a href="#">Университет</a>
-              <a href="#">Театральная</a>
+        <div class="dropdown-search">
+          <button class="dropdown-search-btn">Политехнический институт</button>
+            <div class="dropdown-search__content">
+              <a class="dropdown-search__item" href="#">Политехнический институт</a>
+              <a class="dropdown-search__item" href="#">Вокзальнаят</a>
+              <a class="dropdown-search__item" href="#">Университет</a>
+              <a class="dropdown-search__item"href="#">Театральная</a>
             </div>
         </div>
       </div>

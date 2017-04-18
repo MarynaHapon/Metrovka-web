@@ -1,9 +1,4 @@
-/*
-* Third Party
-*/
-//@import '../../bower_components/normalize-css/normalize.css';
 @import '../../bower_components/normalize-css/reset.css';
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @font-face {
@@ -11,24 +6,23 @@
   src: url(../fonts/Roboto-Regular.ttf);
 }
 
-/*
-* Custom
-*/
 @import 'partials/components/variables.scss';
+@import 'partials/components/dropdown.scss';
+@import 'partials/components/select.scss';
 @import 'partials/page-navbar.scss';
 @import 'partials/block-property-search.scss';
 @import 'partials/block-product-gallery.scss';
 @import 'partials/social-section.scss';
 @import 'partials/blog-section.scss';
 @import 'partials/footer.scss';
-
 @import 'partials/listing.scss';
 
 body {
+  overflow-x: hidden;
   font-family: Roboto-Regular;
   font-size: 14px;
   color: $text-color-dark;
-  //background-color: $dark-gray;
+  //background-color: $gray;
 }
 h1 {
   font-size: 32px;
@@ -36,7 +30,6 @@ h1 {
 h2 {
   font-size: 24px;
 }
-
 a {
   color: #152935;
   text-decoration: none;

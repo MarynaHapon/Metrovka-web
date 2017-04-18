@@ -23,6 +23,10 @@
 
     a {
       color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -182,6 +186,10 @@
   &__title {
     font-size: 16px;
     color: $blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width: $screen-md) {
       margin-top: 25px;
@@ -349,7 +357,7 @@
 }
 
 .cta-buttons {
-  width: 100%;
+  width: 150px;
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -357,7 +365,7 @@
   .btn-cta {
     @extend .btn;
     background-color: #fff;
-    width: 75px;
+    width: 70px;
     border-radius: 5px;
 
     i {

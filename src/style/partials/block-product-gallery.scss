@@ -17,10 +17,70 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  @media (max-width: 890px) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 }
 .product {
+  position: relative;
   width: 202px;
   color: $dark-blue;
+  @media (max-width: 890px) {
+    padding: 0 5px 5px;
+  }
+}
+.dropdown-gallery-btn {
+  @extend .dropdown-btn;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 30px;
+  width: 15px;
+  background: url('../img/3circle.svg') no-repeat left top;
+}
+.dropdown-gallery__content {
+  @extend .dropdown__content;
+  top: 42px;
+  right: 0px;
+  
+  min-width: 60px;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-gallery__list {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px;
+  background-color: $white;
+}
+.dropdown-gallery__triangle {
+  margin-left: 83px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent $white transparent;
+}
+.dropdown-gallery__item {
+  @extend .dropdown__item;
+  padding: 10px 15px;
+  &--red {
+    @extend .dropdown__item;
+    padding: 10px 15px;
+    border-top: 2px solid $gray;
+  }
+}
+.dropdown-gallery__item:hover {
+  background-color: $green;
+  color: $white;
+}
+.dropdown-gallery__item--red:hover {
+  background-color: $red;
+  color: $white;
+}
+.dropdown-gallery:hover .dropdown-gallery__content {
+  @extend .dropdown;
 }
 .product__image {
   height: 135px;
@@ -29,7 +89,7 @@
 .product__price {
   margin-top: 23px;
   font-size: 16px;
-  background: url('../../img/checkmark--glyph.svg') no-repeat 100px center;
+  background: url('../img/checkmark--glyph.svg') no-repeat 100px center;
 }
 .product__descr {
   margin-top: 11px;
@@ -44,11 +104,11 @@
 }
 .product__allocation--red {
   @extend .product__allocation;
-  background: url('../../img/circle.svg') no-repeat left center;
+  background: url('../img/circle.svg') no-repeat left center;
 }
 .product__allocation--blue {
   @extend .product__allocation;
-  background: url('../../img/circle-blue.svg') no-repeat left center;
+  background: url('../img/circle-blue.svg') no-repeat left center;
 }
 .gallery-submit-wrap {
   margin-top: 20px;
@@ -62,8 +122,7 @@
   background-color: $white;
   color: $dark-blue;
   font-size: 16px;
-  border-top: 2px solid $gray;
-  border-bottom: 2px solid $gray;
+  border: 2px solid $gray;
   text-decoration: none;
   cursor: pointer;
   &:hover {

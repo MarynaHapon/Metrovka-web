@@ -11,30 +11,120 @@
   <div class="page-navbar-wrap">
     <div class="page-navbar-inner">
       
-      
       <nav class="navbar">
-        
         <ul class="navbar__list">
-          <li class="navbar__item"><a class="navbar-logo-link" href=""><img src="img/logo.svg" alt="logo"></a></li>
-          <li class="navbar__item"><a href="#">Аренда</a></li>
+          <li class="navbar__item"><a class="navbar-logo-link" href="index.html"><img src="img/logo.svg" alt="logo"></a></li>
+          <li class="navbar__item"><a href="listing-main.html">Аренда</a></li>
           <li class="navbar__item"><a href="#">Продажа</a></li>
           <li class="navbar__item"><a href="#">Посуточно</a></li>
-          <li class="navbar__item"><a class="navbar-overflow_img" href="#">Еще</a>
+          <li class="navbar__item navbar-overflow-btn"><a class="navbar-overflow_img" href="#">Еще</a>
             
-            <!--
             <ul class="navbar-overflow__list">
-              <li class="navbar-owerflof__item">Блог</li>
-              <li class="navbar-owerflof__item">Контакты</li>
-              <li class="navbar-owerclass="page-logo" flof__item">Новый поиск</li>
+              <li class="navbar-owerflof__item"><a href="#">Блог</a></li>
+              <li class="navbar-owerflof__item"><a href="#">Контакты</a></li>
+              <li class="navbar-owerflof__item"><a href="#">Новый поиск</a></li>
             </ul>
-            -->
           </li>
         </ul>
       </nav>
   
       <div class="page-navbar-input">
-        <a class="page-navbar-input__item--img" href="#">Разместить объявление</a>
+        <a class="toggle-advert page-navbar-input__item--img" id="toggle-advert" href="#">Разместить объявление</a>
         <a class="page-navbar-input__item" href="#" type="submit">Войти</a>
+      </div>
+    </div>
+    
+    <div id="overlay-advert" class="page-advert-wrap">
+      <div class="page-advert">
+        <div class="page-advert-inner">
+          <div class="page-advert__descr">
+            <h2>Оставить заявку</h2>
+            <p>Нет времени искать по сайту?</br>
+              Заполняй критерии поиска и получай </br>
+              акутальные объявления как только они</br>
+              появляются на Metrovka.</p>
+          </div>
+        </div>
+  
+        <div class="page-advert-inner page-advert-form-wrap" id="overlay-s">   
+          <input class="toggle-advert advert-exit-btn" type="button">
+          <ul class="search__list">
+            <li class="search__item"><a onclick="openSearch('District')" href="#">Район</a></li>
+            <li class="search__item"><a onclick="openSearch('Metro')" href="#">Метро</a></li>
+          </ul> 
+          
+          <div class="searchElement" id="District">
+            <select>
+              <option>Голосеевский</option>
+              <option>Дарницкий</option>
+              <option>Деснянский</option>
+              <option>Днепровский</option>
+              <option>Оболонский</option>
+              <option>Печерский</option>
+              <option>Подольский</option>
+              <option>Святошинский</option>
+              <option>Соломенский</option>
+              <option>Шевченковский</option>
+            </select>
+          </div>
+          <div class="searchElement" id="Metro" style="display:none">
+            <select>
+              <option>Академгородок</option>
+              <option>Святошин</option>
+              <option>Нивки</option>
+              <option>Вокзальная</option>
+              <option>Крещатик</option>
+              <option>Левобережная</option>
+              <option>Минская</option>
+              <option>Олимпийская</option>
+              <option>Лукьяновская</option>
+              <option>Золотые ворота</option>
+              <option>Харьковская</option>
+            </select>
+          </div>
+            
+          <div class="property-search-form__item">
+            <h3 class="select-menu__header">Кол-во комнат</h3>
+              <ul class="select-menu__rating-list">
+                <li class="select-menu__item select-menu__item--invert"><a href="#">1</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">2</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">3</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">4</a></li>
+                <li class="select-menu__item select-menu__item--invert"><a href="#">5 +</a></li>
+              </ul>
+          </div>
+          
+          <form class="advert-form">
+            <input class="advert-form__text" type="text" placeholder="Как вас зовут?">
+            </br>
+            <input class="advert-form__text" type="email" placeholder="Email">
+            </br>
+            <input class="advert-form__btn" type="submit" value="Оставить заявку">
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="page-header-navigation">
+        <div class="page-header-navigation__button" id="toggle">
+          <span class="page-header-navigation__button--top"></span>
+          <span class="page-header-navigation__button--middle"></span>
+          <span class="page-header-navigation__button--bottom"></span>
+        </div>  
+            
+        <div class="page-header-navigation__overlay" id="overlay">
+          <nav class="page-header-navigation__overlay-menu">
+            <ul>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Продажа</a></li>
+              <li><a href="#">Посуточно</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Новый поиск</a></li>
+            </ul>
+          </nav>
+         </div>  
       </div>
     </div>
   </div>
@@ -42,18 +132,20 @@
     <section class="property-search">
       <h1 class="property-search__header">Поиск недвижимости в Украине</h1>
   
-      <form class="property-search-form">
-        <div class="select-menu">
-          <h3 class="select-menu__header">Выберите город</h3>
-          <select class="select-menu__list">
-            <option class="select-menu__item" value="Киев" selected>Киев</option>
-            <option class="select-menu__item" value="Одесса">Одесса</option>
-            <option class="select-menu__item" value="Львов" selected>Львов</option>
-            <option class="select-menu__item" value="Чернигов">Чернигов</option>
-          </select>
+      <div class="property-search-form">
+        <div class="property-search-form__item">
+          <div class="select-menu">
+            <h3 class="select-menu__header">Выберите город</h3>
+            <select class="select-menu__list">
+              <option class="select-menu__item" value="Киев" selected>Киев</option>
+              <option class="select-menu__item" value="Одесса">Одесса</option>
+              <option class="select-menu__item" value="Львов" selected>Львов</option>
+              <option class="select-menu__item" value="Чернигов">Чернигов</option>
+            </select>
+          </div>
         </div>
-  
-        <div >
+        
+        <div class="property-search-form__item">
           <h3 class="select-menu__header">Кол-во комнат</h3>
           <ul class="select-menu__rating-list">
             <li class="select-menu__item"><a href="#">1</a></li>
@@ -64,33 +156,33 @@
           </ul>
         </div>
         
-        <div>
+        <div class="property-search-form__item">
           <input class="property-search__submit" type="submit" value="Перейти к поиску">
         </div>
-      </form>
+      </div>
     </section>
   </div>
   
   <div class="metro-search-wrap">
     <section class="metro-search">
       <div class="metro-search-inner">
-        <h2>Недвижимость возле метро</h2>
+        <h2 class="metro-search__header">Недвижимость возле метро</h2>
         
-        <ul class="metro-search__list">
-          <li class="metro-search__item"><a href="#">Квартиры</a></li>
-          <li class="metro-search__item"><a href="#">Дома</a></li>
-          <li class="metro-search__item"><a href="#">Офисы</a></li>
+        <ul class="search__list">
+          <li class="search__item"><a href="#">Квартиры</a></li>
+          <li class="search__item"><a href="#">Дома</a></li>
+          <li class="search__item"><a href="#">Офисы</a></li>
         </ul>
         
         
         <div class="dropdowm-search-wrap">
-          <div class="dropdown">
-            <button class="dropbtn">Политехнический институт</button>
-              <div class="dropdown__content">
-                <a href="#">Политехнический институт</a>
-                <a href="#">Вокзальнаят</a>
-                <a href="#">Университет</a>
-                <a href="#">Театральная</a>
+          <div class="dropdown-search">
+            <button class="dropdown-search-btn">Политехнический институт</button>
+              <div class="dropdown-search__content">
+                <a class="dropdown-search__item" href="#">Политехнический институт</a>
+                <a class="dropdown-search__item" href="#">Вокзальнаят</a>
+                <a class="dropdown-search__item" href="#">Университет</a>
+                <a class="dropdown-search__item"href="#">Театральная</a>
               </div>
           </div>
         </div>
@@ -108,6 +200,19 @@
         
         <div class="product-gallery__items">
           <div class="product">
+            
+            <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>
+            
             <img class="product__image" src="img/product.jpg" alt="Apartment photo">
             <p class="product__price">7 800 грн</p>
             <p class="product__descr">2 комн.  •  30 кв.м.</p>
@@ -115,13 +220,35 @@
           </div>
   
            <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+              </div>
             <img class="product__image" src="img/product.jpg" alt="Apartment photo">
             <p class="product__price">10 200 грн</p>
             <p class="product__descr">1 комн.  •  30 кв.м.</p>
             <p class="product__allocation--red">Политехнический институт</p>
           </div>
   
-           <div class="product">
+          <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>   
             <img class="product__image" src="img/product.jpg" alt="Apartment photo">
             <p class="product__price">6 900 грн</p>
             <p class="product__descr">2 комн.  •  30 кв.м.</p>
@@ -129,6 +256,17 @@
           </div>
   
            <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>
             <img class="product__image" src="img/product.jpg" alt="Apartment photo">
             <p class="product__price">9 000 грн</p>
             <p class="product__descr">2 комн.  •  30 кв.м.</p>
@@ -150,15 +288,26 @@
         <h2 class="block-product-gallery__header">Последние объявления в Киеве</h2>
         
         <div class="product-gallery__search">
-          <ul class="metro-search__list">
-            <li class="metro-search__item"><a href="#">Квартиры</a></li>
-            <li class="metro-search__item"><a href="#">Дома</a></li>
-            <li class="metro-search__item"><a href="#">Офисы</a></li>
+          <ul class="search__list">
+            <li class="search__item"><a href="#">Квартиры</a></li>
+            <li class="search__item"><a href="#">Дома</a></li>
+            <li class="search__item"><a href="#">Офисы</a></li>
           </ul>
         </div>
         
         <div class="product-gallery__items">
           <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>
             <img class="product__image" src="img/img1.jpg" alt="Apartment photo">
             <p class="product__price">11 800 грн</p>
             <p class="product__descr">2 комн.  •  48 кв.м.</p>
@@ -166,6 +315,17 @@
           </div>
   
            <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>
             <img class="product__image" src="img/img2.jpg" alt="Apartment photo">
             <p class="product__price">15 000 грн</p>
             <p class="product__descr">3 комн.  •  100 кв.м.</p>
@@ -173,6 +333,17 @@
           </div>
   
            <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>
             <img class="product__image" src="img/img3.jpg" alt="Apartment photo">
             <p class="product__price">11 800 грн</p>
             <p class="product__descr">1 комн.  •  30 кв.м.</p>
@@ -180,6 +351,17 @@
           </div>
   
            <div class="product">
+             <div class="dropdown-gallery">
+              <a  class="dropdown-gallery-btn" href="#"></a>
+              <div class="dropdown-gallery__content">
+                <div class="dropdown-gallery__triangle"></div>
+                <div class="dropdown-gallery__list">
+                  <a class="dropdown-gallery__item" href="#">Добавить</a>
+                  <a class="dropdown-gallery__item" href="#">Посмотреть</a>
+                  <a class="dropdown-gallery__item--red" href="#">Удалить</a>
+                </div>
+              </div>
+            </div>
             <img class="product__image" src="img/product.jpg" alt="Apartment photo">
             <p class="product__price">7 800 грн</p>
             <p class="product__descr">2 комн.  •  30 кв.м.</p>
@@ -243,7 +425,9 @@
           </p>
           <div class="blog-wrapper">
               <div class="blog-item">
-                  <img class="blog-item__img" src="img/blog1.png" alt="">
+                  <a href="#">
+                      <img class="blog-item__img" src="img/blog1.png" alt="">
+                  </a>
                   <div class="blog-item__content">
                       <p class="blog-item__theme blog-item__theme--purple">Лайфхак</p>
                       <h6 class="blog-item__title ">Киевляне могут оплатить коммуналку через Facebook…</h6>
@@ -251,7 +435,9 @@
                   </div>
               </div>
               <div class="blog-item">
-                  <img class="blog-item__img" src="img/blog2.png" alt="">
+                  <a href="#">
+                      <img class="blog-item__img" src="img/blog2.png" alt="">
+                  </a>
                   <div class="blog-item__content">
                       <p class="blog-item__theme blog-item__theme--green">Совет Metrovka</p>
                       <h6 class="blog-item__title ">ТОП-5 самых дешевых квартир Киева</h6>
@@ -259,7 +445,9 @@
                   </div>
               </div>
               <div class="blog-item">
-                  <img class="blog-item__img" src="img/blog3.png" alt="">
+                  <a href="#">
+                      <img class="blog-item__img" src="img/blog3.png" alt="">
+                  </a>
                   <div class="blog-item__content">
                       <p class="blog-item__theme blog-item__theme--blue">Технологии</p>
                       <h6 class="blog-item__title ">Смарт квартиры: цены, предложения и законность</h6>
@@ -329,5 +517,6 @@
   </footer>
 
   <script src="https://use.fontawesome.com/fe62aee9e3.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

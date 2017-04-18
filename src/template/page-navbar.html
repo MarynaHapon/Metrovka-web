@@ -1,30 +1,120 @@
 <div class="page-navbar-wrap">
   <div class="page-navbar-inner">
     
-    
     <nav class="navbar">
-      
       <ul class="navbar__list">
-        <li class="navbar__item"><a class="navbar-logo-link" href=""><img src="img/logo.svg" alt="logo"></a></li>
-        <li class="navbar__item"><a href="#">Аренда</a></li>
+        <li class="navbar__item"><a class="navbar-logo-link" href="index.html"><img src="img/logo.svg" alt="logo"></a></li>
+        <li class="navbar__item"><a href="listing-main.html">Аренда</a></li>
         <li class="navbar__item"><a href="#">Продажа</a></li>
         <li class="navbar__item"><a href="#">Посуточно</a></li>
-        <li class="navbar__item"><a class="navbar-overflow_img" href="#">Еще</a>
+        <li class="navbar__item navbar-overflow-btn"><a class="navbar-overflow_img" href="#">Еще</a>
           
-          <!--
           <ul class="navbar-overflow__list">
-            <li class="navbar-owerflof__item">Блог</li>
-            <li class="navbar-owerflof__item">Контакты</li>
-            <li class="navbar-owerclass="page-logo" flof__item">Новый поиск</li>
+            <li class="navbar-owerflof__item"><a href="#">Блог</a></li>
+            <li class="navbar-owerflof__item"><a href="#">Контакты</a></li>
+            <li class="navbar-owerflof__item"><a href="#">Новый поиск</a></li>
           </ul>
-          -->
         </li>
       </ul>
     </nav>
 
     <div class="page-navbar-input">
-      <a class="page-navbar-input__item--img" href="#">Разместить объявление</a>
+      <a class="toggle-advert page-navbar-input__item--img" id="toggle-advert" href="#">Разместить объявление</a>
       <a class="page-navbar-input__item" href="#" type="submit">Войти</a>
+    </div>
+  </div>
+  
+  <div id="overlay-advert" class="page-advert-wrap">
+    <div class="page-advert">
+      <div class="page-advert-inner">
+        <div class="page-advert__descr">
+          <h2>Оставить заявку</h2>
+          <p>Нет времени искать по сайту?</br>
+            Заполняй критерии поиска и получай </br>
+            акутальные объявления как только они</br>
+            появляются на Metrovka.</p>
+        </div>
+      </div>
+
+      <div class="page-advert-inner page-advert-form-wrap" id="overlay-s">   
+        <input class="toggle-advert advert-exit-btn" type="button">
+        <ul class="search__list">
+          <li class="search__item"><a onclick="openSearch('District')" href="#">Район</a></li>
+          <li class="search__item"><a onclick="openSearch('Metro')" href="#">Метро</a></li>
+        </ul> 
+        
+        <div class="searchElement" id="District">
+          <select>
+            <option>Голосеевский</option>
+            <option>Дарницкий</option>
+            <option>Деснянский</option>
+            <option>Днепровский</option>
+            <option>Оболонский</option>
+            <option>Печерский</option>
+            <option>Подольский</option>
+            <option>Святошинский</option>
+            <option>Соломенский</option>
+            <option>Шевченковский</option>
+          </select>
+        </div>
+        <div class="searchElement" id="Metro" style="display:none">
+          <select>
+            <option>Академгородок</option>
+            <option>Святошин</option>
+            <option>Нивки</option>
+            <option>Вокзальная</option>
+            <option>Крещатик</option>
+            <option>Левобережная</option>
+            <option>Минская</option>
+            <option>Олимпийская</option>
+            <option>Лукьяновская</option>
+            <option>Золотые ворота</option>
+            <option>Харьковская</option>
+          </select>
+        </div>
+          
+        <div class="property-search-form__item">
+          <h3 class="select-menu__header">Кол-во комнат</h3>
+            <ul class="select-menu__rating-list">
+              <li class="select-menu__item select-menu__item--invert"><a href="#">1</a></li>
+              <li class="select-menu__item select-menu__item--invert"><a href="#">2</a></li>
+              <li class="select-menu__item select-menu__item--invert"><a href="#">3</a></li>
+              <li class="select-menu__item select-menu__item--invert"><a href="#">4</a></li>
+              <li class="select-menu__item select-menu__item--invert"><a href="#">5 +</a></li>
+            </ul>
+        </div>
+        
+        <form class="advert-form">
+          <input class="advert-form__text" type="text" placeholder="Как вас зовут?">
+          </br>
+          <input class="advert-form__text" type="email" placeholder="Email">
+          </br>
+          <input class="advert-form__btn" type="submit" value="Оставить заявку">
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="page-header-navigation">
+      <div class="page-header-navigation__button" id="toggle">
+        <span class="page-header-navigation__button--top"></span>
+        <span class="page-header-navigation__button--middle"></span>
+        <span class="page-header-navigation__button--bottom"></span>
+      </div>  
+          
+      <div class="page-header-navigation__overlay" id="overlay">
+        <nav class="page-header-navigation__overlay-menu">
+          <ul>
+            <li><a href="#">Аренда</a></li>
+            <li><a href="#">Продажа</a></li>
+            <li><a href="#">Посуточно</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Новый поиск</a></li>
+          </ul>
+        </nav>
+       </div>  
     </div>
   </div>
 </div>

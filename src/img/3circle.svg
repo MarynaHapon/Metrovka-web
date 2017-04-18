@@ -1,0 +1,30 @@
+<svg width="20" height="36" viewBox="0 0 20 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Group 8</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(878 -10)" figma:type="canvas">
+<g id="Group 8" filter="url(#filter0_d)" figma:type="frame">
+<g id="Oval" figma:type="vector">
+<use xlink:href="#path0_fill" transform="matrix(-1.83697e-16 1 -1 -1.83697e-16 -866.036 14.008)" fill="#FFFFFF"/>
+</g>
+<g id="Oval" figma:type="vector">
+<use xlink:href="#path0_fill" transform="matrix(-1.83697e-16 1 -1 -1.83697e-16 -866.036 21.807)" fill="#FFFFFF"/>
+</g>
+<g id="Oval" figma:type="vector">
+<use xlink:href="#path0_fill" transform="matrix(-1.83697e-16 1 -1 -1.83697e-16 -866.036 29.606)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="-878" y="10" width="20" height="36" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<desc>type="dropShadow" x="0" y="4" size="8" spread="0" color="0,0,0,0.1" blend="normal"</desc>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="4"/>
+<feGaussianBlur stdDeviation="4"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_fill" fill-rule="evenodd" d="M 1.94975 3.96396C 3.02657 3.96396 3.8995 3.0766 3.8995 1.98198C 3.8995 0.887364 3.02657 0 1.94975 0C 0.872932 0 0 0.887364 0 1.98198C 0 3.0766 0.872932 3.96396 1.94975 3.96396Z"/>
+</defs>
+</svg>

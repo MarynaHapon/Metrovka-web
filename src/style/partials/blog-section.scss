@@ -23,6 +23,11 @@
     max-width: 100%;
     width: 100%;
     height: auto;
+    transition: all ease .5s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 
   &__content {
