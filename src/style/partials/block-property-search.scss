@@ -3,43 +3,53 @@
   background-color: $green;
   color: $white;
 }
+
 .property-search {
   margin: 0px auto;
   max-width: 890px;
   padding-bottom: 30px;
+  
   @media (max-width: 890px) {
     padding: 0px 0px 30px 16px;
   }
 }
+
 .property-search__header {
   line-height: 39px;
   font-size: 32px;
   padding: 64px 0px 40px 0px;
+  
   @media (max-width: 890px) {
     padding: 20px 0px 20px 0px;
   }
 }
+
 .select-menu__header {
   padding: 0px 0px 10px 0px;
 }
+
 .property-search-form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  
   @media (max-width: 890px) {
     flex-direction: column;
     align-items: flex-start;
   }
 }
+
 .property-search-form__item {
   @media (max-width: 890px) {
     padding-bottom: 32px;
+    
     &:last-child {
       padding-bottom: 0px;
     }
   }
 }
+
 .select-menu__list {
   height: 40px;
   width: 344px;
@@ -47,49 +57,64 @@
   color: $dark-blue;
   border: 2px solid $gray;
   border-radius: 2px;
+  
   @media (max-width: 890px) {
     width: 312px;
   }
 }
+
+input[type="checkbox"]{
+  position: absolute;
+  opacity: 0;
+  
+  &:checked + .select-menu__item{
+    background-color: $white;
+    color: $dark-blue;
+  }  
+  
+  &:checked + .select-menu__item--invert {
+    background-color: $green;
+    border: 2px solid $green;
+    color: $white;
+  }
+}
+
 .select-menu__item {
+  box-sizing: border-box;
   display: inline-block;
   margin-right: 10px;
-  height: 36px;
-  width: 36px;
+  height: 40px;
+  width: 40px;
   border-radius: 100%;
-  border: 1px solid $white;
-  a {
-    border-radius: 100%;
-    display: inline-block;
-    width: 36px;
-    line-height: 36px;
-    text-align: center;
-    text-decoration: none;
-    color: $white;
-    border-radius: 2px;
+  border: 2px solid $white;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  
+  &:hover {
+    background-color: $green-lighter;
+    transition: 0.2s;
   }
-  a:hover {
-    color: $dark-blue;
+  
+  &:active {
+    opacity: 0.5;
+    transition: 0.3s;
   }
+}
+
+.select-menu__item--invert {
+  @extend .select-menu__item;
+  border: 2px solid $gray;
+  color: $dark-blue;
+  
   &:hover {
     background-color: $white;
     color: $dark-blue;
+    border: 2px solid $green;
   }
 }
-.select-menu__item--invert {
-  border: 1px solid $gray;
-  a {
-    color: $dark-blue;
-  }
-  a:hover {
-    color: $white;
-  }
-  &:hover {
-    background-color: $green;
-    color: $white;
-    border: 1px solid $green;
-  }
-}
+
 .submit {
   width: 200px;
   height: 40px;
@@ -98,108 +123,91 @@
   border: 0px;
   cursor: pointer;
   border-radius: 2px;
+  
   &:hover {
+    transition: 0.3s;
+    background-color: $green-lighter;
     color: $dark-blue;
   }
+  
+  &:active {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
 }
+
 .property-search__submit {
   @extend .submit;
 }
+
 .metro-search-wrap {
   width: 100%;
 }
+
 .metro-search {
   margin: 19px auto 19px;
   max-width: 890px;
   color: $dark-blue;
   background: url('../img/metro.png')  $white no-repeat 450px center;
+  
   @media (max-width: 890px) {
     padding-top: 217px;
     background:  url('../img/metro360.png')  $white no-repeat center 19px;
   }
 }
+
 .metro-search-inner {
   max-width: 320px;
   margin-left: 40px;
   padding-top: 19px;
+  
   @media (max-width: 890px) {
     width: 320px;
     margin: 0px auto;
   }
 }
+
 .metro-search__header {
   line-height: 32px;
   font-size: 20px;
 }
+
 .search__list {
   @extend .navbar__list;
   justify-content: flex-start;
 }
+
 .search__item {
-  height: 40px;
   margin: 18px 30px 0px 0px;
-  padding: 0px 6px 0px;
-  line-height: 30px;
-  font-size: 14px; 
   a {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0px 6px 0px;
     text-decoration: none;
     color: $dark-blue;
+    transition: 0.3s;
   }
+  
   &:hover {
     border-bottom: 2px solid $green;
     height: 38px;
   }
+  
+  &:active {
+    transition: 0.3s;
+    opacity: 0.5;
+  }
 }
+
 .dropdowm-search-wrap {
   margin-top: 19px;
 }
-/* Style The Dropdown Button */
-.dropdown-search-btn {
-  height: 40px;
-  width: 320px;
-  padding-left: 30px;
-  background-color: $white;
-  color: $dark-blue;
-  border: 2px solid $gray;
-  border-radius: 2px;
-  cursor: pointer;
-  text-align: left;
-  background: url('../img/triangle.svg') no-repeat 290px center, url('../img/circle.svg') no-repeat 15px center;
-  &:hover { 
-  background: url('../img/triangle-reverse.jpg') no-repeat 290px center, url('../img/circle.svg') no-repeat 15px center;
-  }
-}
-.dropdown-search {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-search__content {
-  @extend .dropdown__content;
-  box-shadow: 0px 2px 4px $gray;
-}
-.dropdown-search__item {
-  @extend .dropdown__item;
-  font-size: 14px;
-  line-height: 40px;
-  padding-left: 30px;
-  height: 40px;
-  width: 290px;
-  color: $dark-blue;
-  border-top: 0px;
-  background: url('../img/circle.svg') no-repeat 15px center;
-}
-.dropdown-search__item:hover {
-  background-color: $green;
-  color: $white;
-}
-.dropdown-search:hover .dropdown-search__content {
-  @extend .dropdown;
-  background-color: $white;
-}
+
 .search-submit-wrap {
   padding-top: 30px;
   padding-bottom: 19px;
 }
+
 .search-submit {
   width: 320px;
   height: 40px;
@@ -208,9 +216,13 @@
   border-radius: 2px;
   cursor: pointer;
   color: $white;
-}
-.search-submit:hover {
-  background-color: $green-lighter;
+  transition: 0.3s;
+  &:hover {
+    background-color: $green-lighter;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 

@@ -1,0 +1,86 @@
+  <div id="overlay-advert" class="page-advert-wrap">
+    <div class="page-advert">
+      <div class="page-advert-inner">
+        <div class="page-advert__descr">
+          <h2>Оставить заявку</h2>
+          <p>Нет времени искать по сайту?<br>
+            Заполняй критерии поиска и получай <br>
+            акутальные объявления как только они<br>
+            появляются на Metrovka.</p>
+        </div>
+      </div>
+
+      <div class="page-advert-inner page-advert-form-wrap" id="overlay-s">   
+        <form>
+        <input class="toggle-advert advert-exit-btn" type="button" value=" ">
+        <ul class="search__list">
+          <li class="search__item"><a onclick="openSearch('District')" href="#">Район</a></li>
+          <li class="search__item"><a onclick="openSearch('Metro')" href="#">Метро</a></li>
+        </ul> 
+        
+        <div class="searchElement" id="District">
+          <select id="select-list-district">
+            <option>Голосеевский</option>
+            <option>Дарницкий</option>
+            <option>Деснянский</option>
+            <option>Днепровский</option>
+            <option>Оболонский</option>
+            <option>Печерский</option>
+            <option>Подольский</option>
+          </select>
+        </div>
+        <div class="searchElement" id="Metro" style="display:none">
+          <select id="select-list-metro">
+            <option>Академгородок</option>
+            <option>Святошин</option>
+            <option>Нивки</option>
+            <option>Вокзальная</option>
+            <option>Крещатик</option>
+            <option>Левобережная</option>
+            <option>Минская</option>
+          </select>
+        </div>
+          
+        <div class="property-search-form__item">
+          <h3 class="select-menu__header">Кол-во комнат</h3>
+            <div class="select-menu__rating-list">
+            
+              <label>
+                <input type="checkbox" name="room1">
+                <span class="select-menu__item--invert">1</span>
+              </label>
+          
+              <label>
+                <input type="checkbox" name="room2">
+                <span class="select-menu__item--invert">2</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="room3">
+                <span class="select-menu__item--invert">3</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="room4">
+                <span class="select-menu__item--invert">4</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="room5">
+                <span class="select-menu__item--invert">5+</span>
+              </label>
+              
+            </div>
+        </div>
+        
+        <div class="advert-form">
+          <input class="advert-form__text" type="text" placeholder="Как вас зовут?">
+          <br>
+          <input class="advert-form__text" type="email" placeholder="Email">
+          <br>
+          <input class="advert-form__btn" type="submit" value="Оставить заявку">
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>

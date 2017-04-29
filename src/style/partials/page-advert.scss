@@ -1,0 +1,114 @@
+.page-advert-wrap {
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(94, 104, 114, 0.5);
+  z-index: 101;
+  
+  &.open-advert {
+    visibility: visible;
+  }
+  
+  &.close-advert {
+    visibility: hidden;
+  }
+}
+
+.page-advert {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 800px;
+  min-height:  484px;
+  opacity: 1;
+  background-color: $white;
+  z-index: 15;  
+  border-top: 4px solid $green;
+  
+  @media (max-width: 890px) {
+    overflow-y: scroll;
+    width: auto;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.page-advert-inner {
+  width: 50%;
+  background-color: $blue-lighter;
+  
+  @media (max-width: 890px) {
+    width: 100%;
+  }
+}
+.page-advert-form-wrap {
+  width: 360px;
+  padding-top: 26px;
+  padding-left: 40px;
+  background-color: $white;
+}
+
+.page-advert__descr {
+  padding-top: 46px;
+  padding-left: 40px;
+  height: calc(100%-46px);
+  flex-direction: column;
+  
+  h2 {
+    line-height: 32px;
+  }
+  
+  p {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.searchElement {
+  padding-top: 12px;
+  padding-bottom: 19px;
+}
+
+.advert-form {
+  padding-top: 40px;
+}
+
+.advert-form__text {
+  width: 316px;
+  height: 34px;
+  line-height: 36px;
+  border-radius: 2px;
+  border: 2px solid $gray;
+  text-indent: 20px;
+  margin-bottom: 20px;
+}
+
+.advert-form__btn {
+  @extend .btn;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.advert-exit-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  background: url('../img/exit-btn.svg') no-repeat;
+  border: 0px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}

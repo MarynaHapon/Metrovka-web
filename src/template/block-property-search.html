@@ -2,34 +2,56 @@
   <section class="property-search">
     <h1 class="property-search__header">Поиск недвижимости в Украине</h1>
 
-    <div class="property-search-form">
-      <div class="property-search-form__item">
+    <form class="property-search-form">
+      
+      <div class="property-search-form__item">  
         <div class="select-menu">
           <h3 class="select-menu__header">Выберите город</h3>
-          <select class="select-menu__list">
-            <option class="select-menu__item" value="Киев" selected>Киев</option>
-            <option class="select-menu__item" value="Одесса">Одесса</option>
-            <option class="select-menu__item" value="Львов" selected>Львов</option>
-            <option class="select-menu__item" value="Чернигов">Чернигов</option>
+          <select class="" id="select-list">
+            <option class="" value="Киев" selected>Киев</option>
+            <option class="" value="Одесса">Одесса</option>
+            <option class="" value="Львов">Львов</option>
+            <option class="" value="Чернигов">Чернигов</option>
           </select>
         </div>
       </div>
       
       <div class="property-search-form__item">
         <h3 class="select-menu__header">Кол-во комнат</h3>
-        <ul class="select-menu__rating-list">
-          <li class="select-menu__item"><a href="#">1</a></li>
-          <li class="select-menu__item"><a href="#">2</a></li>
-          <li class="select-menu__item"><a href="#">3</a></li>
-          <li class="select-menu__item"><a href="#">4</a></li>
-          <li class="select-menu__item"><a href="#">5 +</a></li>
-        </ul>
+        
+        <div class="select-menu__rating-list">
+          <label>
+            <input type="checkbox" name="room1">
+            <span class="select-menu__item">1</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" name="room2">
+            <span class="select-menu__item">2</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" name="room3">
+            <span class="select-menu__item">3</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" name="room4">
+            <span class="select-menu__item">4</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" name="room5">
+            <span class="select-menu__item">5+</span>
+          </label>
+        </div>
       </div>
       
       <div class="property-search-form__item">
         <input class="property-search__submit" type="submit" value="Перейти к поиску">
       </div>
-    </div>
+      
+    </form>
   </section>
 </div>
 
@@ -44,17 +66,13 @@
         <li class="search__item"><a href="#">Офисы</a></li>
       </ul>
       
-      
       <div class="dropdowm-search-wrap">
-        <div class="dropdown-search">
-          <button class="dropdown-search-btn">Политехнический институт</button>
-            <div class="dropdown-search__content">
-              <a class="dropdown-search__item" href="#">Политехнический институт</a>
-              <a class="dropdown-search__item" href="#">Вокзальнаят</a>
-              <a class="dropdown-search__item" href="#">Университет</a>
-              <a class="dropdown-search__item"href="#">Театральная</a>
-            </div>
-        </div>
+        <select class="" id="select-list-metro-station">
+          <option class="" value="Политехнический институт" selected>Политехнический институт</option>
+          <option class="" value="Вокзальная">Вокзальная</option>
+          <option class="" value="Университет">Университет</option>
+          <option class="" value="Театральная">Театральная</option>
+        </select>
       </div>
       
       <div class="search-submit-wrap">

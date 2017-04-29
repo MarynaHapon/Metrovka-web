@@ -1,18 +1,21 @@
 .dropdown-btn {
   cursor: pointer;
 }
+
 .dropdown__content {
   display: none;
   position: absolute;
   z-index: 1;
 }
+
 .dropdown__item {
   display: block;
   font-size: 14px;
-  color: $dark-blue;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
+  transition: 0.3s;
 }
+
 .dropdown {
   display: block;
 }

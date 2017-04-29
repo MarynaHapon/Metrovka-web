@@ -1,35 +1,50 @@
 .product {
   width: 100%;
 }
+
 .block-product-gallery {
   margin: 20px auto 0px;
   max-width: 890px;
   background-color: $white;
 }
+
 .block-product-gallery-inner {
   padding: 25px;
 }
+
 .block-product-gallery__header {
   text-align: center;
   padding-bottom: 25px;
 }
+
 .product-gallery__items {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  
   @media (max-width: 890px) {
     overflow-x: scroll;
     overflow-y: hidden;
   }
 }
+
 .product {
+  box-sizing: border-box;
   position: relative;
   width: 202px;
   color: $dark-blue;
+  padding: 4px;
+  
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 2px $gray;
+  }
+  
   @media (max-width: 890px) {
-    padding: 0 5px 5px;
+    margin: 5px 5px 5px;
   }
 }
+
 .dropdown-gallery-btn {
   @extend .dropdown-btn;
   position: absolute;
@@ -39,21 +54,23 @@
   width: 15px;
   background: url('../img/3circle.svg') no-repeat left top;
 }
+
 .dropdown-gallery__content {
   @extend .dropdown__content;
   top: 42px;
   right: 0px;
-  
   min-width: 60px;
   box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
 .dropdown-gallery__list {
   display: flex;
   flex-direction: column;
   padding: 5px 0px;
   background-color: $white;
 }
+
 .dropdown-gallery__triangle {
   margin-left: 83px;
   width: 0;
@@ -62,58 +79,74 @@
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent $white transparent;
 }
+
 .dropdown-gallery__item {
   @extend .dropdown__item;
   padding: 10px 15px;
+  
   &--red {
     @extend .dropdown__item;
     padding: 10px 15px;
     border-top: 2px solid $gray;
   }
 }
+
 .dropdown-gallery__item:hover {
   background-color: $green;
   color: $white;
 }
+
 .dropdown-gallery__item--red:hover {
   background-color: $red;
   color: $white;
 }
+
 .dropdown-gallery:hover .dropdown-gallery__content {
   @extend .dropdown;
+  
 }
+
 .product__image {
   height: 135px;
-  width: 202px;
+  min-width: 194px;
+  width: 100%;
 }
+
 .product__price {
   margin-top: 23px;
   font-size: 16px;
   background: url('../img/checkmark--glyph.svg') no-repeat 100px center;
 }
+
 .product__descr {
   margin-top: 11px;
   font-size: 12px;
   color: $gray-lighter;
   letter-spacing: 0.5px;
 }
+
 .product__allocation {
   margin-top: 15px;
   padding-left: 20px;
   font-size: 12px;
 }
+
 .product__allocation--red {
   @extend .product__allocation;
   background: url('../img/circle.svg') no-repeat left center;
 }
+
 .product__allocation--blue {
   @extend .product__allocation;
   background: url('../img/circle-blue.svg') no-repeat left center;
 }
+
 .gallery-submit-wrap {
   margin-top: 20px;
 }
+
 .gallery-submit {
+  box-sizing: border-box;
   display: inline-block;
   height: 40px;
   width: 100%;
@@ -125,10 +158,17 @@
   border: 2px solid $gray;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.3s;
+  
   &:hover {
     background-color: $gray;
   }
+  
+  &:active {
+    opacity: 0.5;
+  }
 }
+
 .product-gallery__search {
   display: flex;
   justify-content: center;

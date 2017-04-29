@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: $text-color-dark;
+  background-color: $dark-gray;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+a {
+  color: #152935;
+  text-decoration: none;
+}
+
+.btn {
+  width: 320px;
+  height: 40px;
+  background-color: $green;
+  border: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: $white;
+  
+  &:hover {
+    background-color: $green-lighter;
+  }
+  
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.btn--small {
+  width: 160px;
+}

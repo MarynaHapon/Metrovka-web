@@ -1,76 +1,123 @@
-.select-hidden {
-  display: none;
-  visibility: hidden;
-}
-.select {
-  cursor: pointer;
-  display: inline-block;
+.jq-select {
   position: relative;
-  color: $dark-blue;
+  display: block;
+  box-sizing: border-box;
+  padding-left: 18px;
   width: $select-width;
-  height: $select-height;
+  height:  $select-height;
   background-color: $white;
-  font-size: 14px;
-  line-height: 36px;
   border-radius: 2px;
   border: 2px solid $gray;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  color: $dark-blue;
+  line-height: 40px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
 }
-.select-320 {
-  @extand .select;
-  width: 320px;
+
+.jq-select:hover {
+  border-color: $green-lighter; 
 }
-.select-styled {
-  position: absolute; 
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-left: 18px;
-  //transition: 0.15s;
-  &:after {
-    content:"";
-    width: 0;
-    height: 0;
-    border: 5px solid transparent;
-    border-color: $green transparent transparent transparent;
-    position: absolute;
-    top: 16px;
-    right: 10px;
-  }
-  &:hover {
-    
-  }
-  &:active, &.active {
-    border: 0 0 2px $green;
-    &:after {
-      top: 9px;
-      border-color: transparent transparent $green transparent;
-    }
-  }
+
+.jq-select:active, .jq-select.open, .jq-select:focus {
+  border-color: $green-lighter; 
 }
-.select-options {
-  margin-top: 2px;
-  display: none; 
+
+.jq-select:after {
   position: absolute;
-  top: 38px;
-  right: 0;
-  left: -2px;
-  z-index: 999;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid $green;
+  border-color: $green transparent transparent transparent;
+  pointer-events: none;   
+  right: 10px;
+  top: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.jq-select.open:after {
+  top: 9px;
+  transform: rotate(-180deg); 
+}
+
+.jq-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0); 
+}
+
+.jq-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none; 
+}
+
+.jq-select.disabled:after {
+  border-color: #cccccc; 
+}
+.jq-select.wide {
+  width: 100%; 
+}
+
+.jq-select .list {
+  position: absolute;
+  box-sizing: border-box;
+  width: $select-width;
   background-color: $white;
-  box-shadow: 0px 0px 2px $gray;
-  li {
-    margin: 0;
-    text-indent: 20px;
-    //transition: 0.15s;
-    &:hover {
-      color: $white;
-      background: $green;
-    }
-    &[rel="hide"] {
-      display: none;
-    }
-  }
+  border-radius: 2px;
+  border: 2px solid $green-lighter;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  top: 100%;
+  left: -2px;
+  transform-origin: 50% 0;
+  //transform: scale(1) translateY(0px);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9; 
+}
+
+.jq-select .list:hover .option:not(:hover) {
+  background-color: transparent !important; 
+}
+
+.jq-select .option {
+  cursor: pointer;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  text-align: left;
+  transition: all 0.2s; 
+}
+
+.jq-select .option:hover, .jq-select .option.focus, .jq-select .option.selected.focus {
+  background-color: $green-lighter; 
+}
+
+.jq-select .option:hover {
+  color: $white;
+}
+
+.jq-select .option.selected {
+  font-weight: bold; 
+}
+
+.jq-select .option.disabled {
+  background-color: transparent;
+  color: #999;
+  cursor: default; 
+}
+
+.no-csspointerevents .jq-select .list {
+  display: none; 
+}
+
+.no-csspointerevents .jq-select.open .list {
+  display: block; 
 }
