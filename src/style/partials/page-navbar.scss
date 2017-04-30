@@ -1,6 +1,7 @@
 .page-navbar-wrap {
   width: 100%;
   background-color: $green;
+  margin-bottom: -1px;
 }
 
 .page-navbar-inner {
@@ -139,17 +140,22 @@
   @extend .dropdown;
 }
 
-.navbar-owerflof__item{
+.navbar-owerflof__item { 
   @extend .dropdown__item;
   height: 26px;
 
   a {
     line-height: 26px;
     color: $white;
+    transition: 0.2s;
   }
-  &:hover {
-    height: 24px;
-    border-bottom: 2px solid $white;  
+  
+  a:hover {
+    color: $green-lighter;
+  }
+  
+  a:active {
+    opacity: 0.5;
   }
 }
 
@@ -263,6 +269,7 @@
         color: $white;
         text-decoration: none;
         overflow: hidden;
+        
         &:hover:after,
         &:focus:after,
         &:active:after {
