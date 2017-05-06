@@ -1,0 +1,119 @@
+.carousel{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.listings-carousel {
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+.slide{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.slide.active,
+.slide.left,
+.slide.right{
+  z-index: 2;
+  opacity: 1;
+}
+
+.js-reset-left{left:auto}
+
+.slide.left{
+  left:-100%;
+  right:0;
+}
+
+.slide.right{
+  right:-100%;
+  left: auto;
+}
+
+.transition .slide.left{left:0%}
+.transition .slide.right{right:0%}
+
+.transition .slide.shift-right{right: 100%;left:auto}
+.transition .slide.shift-left{left: 100%;right:auto}
+
+.transition .slide{
+  transition-property: right, left, margin;
+}
+
+.indicators{
+  width:100%;
+  position: absolute;
+  bottom:0;
+  z-index: 4;
+  padding:0;
+  text-align: center;
+}
+
+.indicators li{
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin: 5px;
+  background: #fff;
+  list-style-type: none;
+  border-radius: 50%;
+  border: 2px solid $green;
+  cursor: pointer;
+  transition:background 0.3s ease-out;
+}
+
+.indicators li.active,
+.indicators li:hover{
+  background:$green
+}
+
+.arrow{
+  width: 20px;
+  height: 20px;
+  position:absolute;
+  top:50%;
+  z-index:5;
+  border-top:3px solid $green;
+  border-right:3px solid $green;
+  cursor: pointer;
+  opacity: 0.3;
+  transition:all 0.3s ease-out;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.arrow:hover{
+  opacity: 1;
+}
+
+.arrow-left{
+  left:20px;
+  transform:rotate(225deg);
+}
+
+.arrow-right{
+  right:20px;
+  transform:rotate(45deg);
+}

@@ -56,6 +56,11 @@
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
+  height: 630px;
+
+  @media (max-width: $screen-lg) {
+    height: 450px;
+  }
 
   &__image-promo {
 

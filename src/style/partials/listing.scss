@@ -163,6 +163,11 @@
     }
   }
 
+  &__wrapper {
+    display: flex;
+    height: 230px;
+  }
+
   &__content {
     width: 440px;
 
@@ -400,6 +405,7 @@
   flex-direction: row;
   margin-bottom: 50px;
   justify-content: flex-end;
+  margin-top: -50px;
 
   .listing-nav__slider,
   .listing-nav__pagination{
